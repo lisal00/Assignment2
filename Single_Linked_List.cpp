@@ -3,6 +3,7 @@
 
 using namespace std;
 
+/**Constructor*/
 template<typename Item_Type>
 Single_Linked_List<Item_Type>::Single_Linked_List(){
     head = NULL;
@@ -10,6 +11,19 @@ Single_Linked_List<Item_Type>::Single_Linked_List(){
     num_items = 0;
 }
 
+template<typename Item_Type>
+/** Construct a copy of a list. */
+Single_Linked_List<Item_Type>::Single_Linked_List(const Single_Linked_List<Item_Type>& other) {
+    head = NULL;
+    tail = NULL;
+    num_items = 0;
+    for (const_iterator itr = other.begin();
+    itr != other.end(); ++itr) {
+    push_back(*itr);
+    }
+}
+
+/** Destructor*/
 template<typename Item_Type>
 Single_Linked_List<Item_Type>::~Single_Linked_List() {
     while (head != NULL) {
@@ -21,11 +35,27 @@ Single_Linked_List<Item_Type>::~Single_Linked_List() {
     num_items = 0;
 }
 
-/** Pushes an element to the front of list */
-void Single_Linked_List::push_front();
+template<typename Item_Type>
+/** Pushes an element to the front of list 
+ *  @param item item to be placed at front
+*/
+void Single_Linked_List<Item_Type>::push_front(const Item_Type& item){
+    Node* head = new Node(item);
+    if (head->next != NULL)
+        head->next;
+    if (tail = NULL)
+        tail = head;
+        
+    num_items++;
+}
 
-/** Pushes an element to the back of list*/
-void push_back();
+template<typename Item_Type>
+/** Pushes an element to the back of list
+ * @param item item to be placed at back
+*/
+void Single_Linked_List<Item_Type>::push_back(const Item_Type& item){
+
+}
 
 /** Removes an element from the front of list */
 void pop_front();

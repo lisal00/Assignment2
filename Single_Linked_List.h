@@ -10,16 +10,26 @@ template<typename Item_Type>
             Node* head;
             Node* tail;
             int num_items;
-            
-            Single_Linked_List(); //constructor
-            ~Single_Linked_List();
-            
-        public:
-            /** Pushes an element to the front of list */
-            void push_front();
 
-            /** Pushes an element to the back of list*/
-            void push_back();
+            /** Constructor */
+            Single_Linked_List(); 
+
+            /** Destructor */
+            ~Single_Linked_List();
+
+            /** Construct a copy of a list. */
+            Single_Linked_List(const Single_Linked_List<Item_Type>& other); 
+
+        public:
+            /** Pushes an element to the front of list 
+             * @param item item to be placed at front
+            */
+            void push_front(const Item_Type& item);
+
+            /** Pushes an element to the back of list
+             * @param item item to be placed at back
+            */
+            void push_back(const Item_Type& item);
 
             /** Removes an element from the front of list */
             void pop_front();
