@@ -1,22 +1,32 @@
 #ifndef PROFESSIONAL_H_
 #define PROFESSIONAL_H_
-
 #include "Employee.h"
 
+using namespace std;
+
 class Professional : public Employee {
+    private:
+    double salary;
+
     public:
-        Professional(string name_in, double hW, double hR){}
+        Professional(string name_in, double hW, double hR, double salary):Employee(name_in, hW, hR){
+            salary = 0;
+        }
         
-        /**calculates weekly salary */
-        weeklySal() const;
+        /**calculates weekly salary 
+         * @return weekly salary
+        */
+        double weeklySal() const;
 
         /**calculates health care contributions*/
-        healthCare() const;
+        double healthCare() const;
 
-        /**calculates vacation days accrued*/
-        vacation() const;
+        /**calculates vacation days
+         * @return vacaction days
+        */
+        double vacation() const;
         
-}
+};
 
 
 #endif

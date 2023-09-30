@@ -1,11 +1,15 @@
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
+#include <string>
+using namespace std;
+
 
 class Employee{
     private:
         double hoursWorked;
         double hourlyRate;
         string name;
+        
     public:
         /**constructor*/
         Employee(string name_in, double hW, double hR){
