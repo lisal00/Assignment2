@@ -11,12 +11,9 @@ class Employee{
         string name;
         
     public:
+        Employee() = default;
         /**constructor*/
-        Employee(string name_in, double hW, double hR){
-            hoursWorked = hW;
-            hourlyRate = hR;
-            name = name_in;
-        }
+        Employee(string name_in, double hW, double hR): name(name_in), hourlyRate(hR), hoursWorked(hW){}
 
         /**destructor*/
         virtual ~Employee(){}

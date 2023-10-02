@@ -1,6 +1,9 @@
 #include "Professional.h"
 
+Professional::Professional(string name_in, double hW, double salary):Employee(name_in, hW, 0){
 
+}
+        
 
 /**calculates weekly salary
  * @return weekly salary
