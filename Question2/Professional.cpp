@@ -1,9 +1,9 @@
 #include "Professional.h"
+using namespace std;
 
-Professional::Professional(string name_in, double hW, double salary):Employee(name_in, hW, 0){
-
+Professional::Professional(string name_in, double salary_in):Employee(name_in, 0, 0){
+    salary = salary_in;
 }
-        
 
 /**calculates weekly salary
  * @return weekly salary
@@ -11,13 +11,15 @@ Professional::Professional(string name_in, double hW, double salary):Employee(na
 double Professional::weeklySal() const{
     return salary / 52;
 }
-/**calculates healthcare contributions */
+/**calculates healthcare contributions 
+ * @return amount contributed for insurance
+*/
 double Professional::healthCare() const{
-    return salary / (salary*1.5);
+    return weeklySal() * contributionPercent;
 }
 /**calculates vacation days accrued
- * @return vacation days: salary / 260
+ * @return vacation days 
 */
 double Professional::vacation() const{
-    return 15; 
+    return vacationDays; 
 }

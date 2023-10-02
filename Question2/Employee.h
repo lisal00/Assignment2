@@ -11,7 +11,6 @@ class Employee{
         string name;
         
     public:
-        Employee() = default;
         /**constructor*/
         Employee(string name_in, double hW, double hR): name(name_in), hourlyRate(hR), hoursWorked(hW){}
 
@@ -24,16 +23,27 @@ class Employee{
         /**calculates health care contributions*/
         virtual double healthCare() const = 0;
 
-        /**calculates vacation days accrued*/
+        /**calculates vacation days*/
         virtual double vacation() const = 0;
 
+        /**gets hours worked
+         * @return hours worked
+        */
         double get_hoursWorked() const{
             return hoursWorked;
         }
+        /**gets hourly rate
+         * @return hourly rate
+        */
         double get_hourlyRate() const{
             return hourlyRate;
         }
-
+        /**gets name
+         * @return name
+        */
+        string get_name() const{
+            return name;
+        }
 };
 
 #endif
