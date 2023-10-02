@@ -9,7 +9,7 @@ class Professional : public Employee {
     double salary;
 
     public:
-        Professional(string name_in, double hW, double hR, double salary):Employee(name_in, hW, hR){
+        Professional(string name_in, double hW, double salary):Employee(name_in, hW){
             salary = 0;
         }
         

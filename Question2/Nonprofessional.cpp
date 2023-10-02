@@ -9,7 +9,7 @@ double Nonprofessional::weeklySal() const{
 }
 
 double Nonprofessional::healthCare() const{
-    return 12;
+    return (get_hoursWorked()/15);
 }
 
 double Nonprofessional::vacation() const{
