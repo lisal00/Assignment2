@@ -1,13 +1,13 @@
 #ifndef NODE_H_
 #define NODE_H_
 
-template<typename Item_Type>
+template<typename IT>
 struct Node {
-    Item_Type data;
-
+    IT data;
     Node* next;
     
-    Node(const Item_Type& data_item, Node* next_ptr = NULL) :
+    /**constructor*/
+    Node(const IT& data_item, Node* next_ptr = NULL) :
     data(data_item), next(next_ptr) {}
 };
 
