@@ -9,7 +9,6 @@ using namespace std;
 int main(){
     Professional Worker0090("Emma Johnson", 55000.00);//init professional worker
     cout << setprecision (2) << fixed;
-
     cout << "Professional " << Worker0090.get_name() << " has a weekly salary of $" 
     << Worker0090.weeklySal() << " and $" << Worker0090.healthCare() 
     << " will be taken out for insurance. Every professional has a fixed number of vacation days: " 

@@ -6,13 +6,13 @@ using namespace std;
 
 class Employee{
     private:
-        double hoursWorked;
-        double hourlyRate;
+        double contribution;
+        double vacationDays;
         string name;
         
     public:
         /**constructor*/
-        Employee(string name_in, double hW, double hR): name(name_in), hourlyRate(hR), hoursWorked(hW){}
+        Employee(string name_in): name(name_in), contribution(0), vacationDays(0){}
 
         /**destructor*/
         virtual ~Employee(){}
@@ -26,23 +26,29 @@ class Employee{
         /**calculates vacation days*/
         virtual double vacation() const = 0;
 
-        /**gets hours worked
-         * @return hours worked
-        */
-        double get_hoursWorked() const{
-            return hoursWorked;
-        }
-        /**gets hourly rate
-         * @return hourly rate
-        */
-        double get_hourlyRate() const{
-            return hourlyRate;
-        }
         /**gets name
          * @return name
         */
-        string get_name() const{
-            return name;
+        string get_name() const{return name;}
+
+        /**gets vacation days
+         * @return vacation days
+        */
+        double get_vacationDays ()const{return vacationDays;}
+
+        /**sets vacation days*/
+        void set_vacationDays(double vacationDays){
+            this->vacationDays = vacationDays;
+        }
+
+        /**gets health carecontribution
+         * @return contribution amount
+         */
+        double get_contribution() const{return contribution;}
+
+        /**sets contribution amount*/
+        void set_contribution(double contribution){
+            this->contribution = contribution;
         }
 };
 

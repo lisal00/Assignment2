@@ -6,9 +6,7 @@ using namespace std;
 
 class Professional : public Employee {
     private:
-    double salary;
-    int const vacationDays = 15; //set number of vacation days
-    double const contributionPercent = 0.08; //8% is taken out for health insurance
+        double salary;
 
     public:
         /**constructor*/
@@ -17,17 +15,17 @@ class Professional : public Employee {
         /**calculates weekly salary 
          * @return weekly salary
         */
-        double weeklySal() const;
+        double weeklySal() const override;
 
         /**calculates healthcare contributions 
          * @return amount contributed for insurance
         */
-        double healthCare() const;
+        double healthCare() const override;
 
         /**calculates vacation days
          * @return vacaction days
         */
-        double vacation() const;
+        double vacation() const override;
 };
 
 
