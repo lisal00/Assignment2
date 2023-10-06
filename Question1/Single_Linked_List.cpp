@@ -29,7 +29,7 @@ Single_Linked_List<Item_Type>::~Single_Linked_List() {
 template<typename Item_Type>
 void Single_Linked_List<Item_Type>::push_front(const Item_Type& item){
     head = new Node(item, head);
-    if (tail == NULL){
+    if (tail == NULL){ //only 1 element
         tail = head;
     }
     num_items++;
