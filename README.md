@@ -9,3 +9,6 @@ Run main.cpp from folder question1.
 ## Question 2
 Run main.cpp from folder question2.
 
+![image](https://github.com/lisal00/Assignment2/assets/143776518/5428ec02-f0c7-4c93-a0f7-e1e652477902)
+
+
